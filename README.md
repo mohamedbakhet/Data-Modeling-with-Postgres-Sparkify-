@@ -49,7 +49,7 @@ this is sample of data
 ---
 this design is represent the star schema design 
 
-![](Sparkify.png)
+![](image/Sparkify.png)
 
 
 ### Fact Table

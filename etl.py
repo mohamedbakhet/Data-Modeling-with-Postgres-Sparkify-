@@ -127,7 +127,7 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
-       """
+    """
     Description: This function is responsible for listing the files in a directory,
     and then executing the ingest process for each file according to the function
     that performs the transformation to save it to the database.

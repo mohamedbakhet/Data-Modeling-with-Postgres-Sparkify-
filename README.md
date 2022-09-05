@@ -1,4 +1,7 @@
-# DATA MODELING WITH POSTGRES
+
+![](image/DATA_MODELING_WITH_POSTGRES_(Sparkify).png)
+
+This project was provided as part of Udacity's Data Engineering Nanodegree program, you can [see all the Nano Degree projects from here](https://github.com/mohamedbakhet/Data-Engineering-Udacity-Nano-Degree-Program-).
 ## ROJECT DESCRIPTION
 ---
 **Sparkify** is new music streaming app wants to analyze the data they've been collecting on songs and user activity on their. The analytics team is particularly interested in understanding what songs users are listening to. Currently and other analysis needs. 
@@ -81,39 +84,20 @@ timestamps of records in songplays broken down into specific units
 and this desing help analysis team to create sampler quaries because this design more denormalize so don't need a lot of joins to create one quries.
 
 for example this query if the database is normalize it need more than two table  
-```sql
-select 
-  songs.song_id, 
-  songs.artist_id
-from 
-  songs 
-  join artists on songs.artist_id = artists.artist_id 
-where 
-  songs.title =% s
-  and artists.name =% s
-  and songs.duration =% s;
-```
+
+![](image/carbon.png)
+
 without denormalization 
-```sql
-select 
-    songs.song_id,
-    songs.artist_id
-from
-    songs
-    join artists on songs.artist_id =artists.artist_id
-    join song_duration on song_duration.songid = songs.songid 
-where 
-    songs.title=%s 
-    and artists.name=%s 
-    and song_duration.duration=%s;
-```
-## Running 
+
+![](image/carbon2.png)
+## usage  
 ---
 1. prepare Environment  install python and postgresSql
 2. first run python file ``create_tables.py`` to resat or create data set you can run it from **Termanil** or any **python IDE**
 3. run ``etl.py`` using  **Termanil** or any **python IDE** or ``etl.ipynb`` using  **jupyter notebook** 
 4. run ``test.ipynb`` to test and see the development in database
 5. close any connection opening 
+
 ## files
 ---
 ### (folder) data/log_data
@@ -141,13 +125,18 @@ A Python Jupyter Notebook that was used to displays the first few rows of each t
 
 ## libreries and tools 
 ---
+### tools
+>* juputer notebook 
+>* python 
+>* postgresSql
+>* text editor
+
+### python package
 >1. psycopg2
 >2. datetime
 >3. os
 >4. pandas 
 
-
->* juputer notebook 
->* python 
->* postgresSql
->* text editor
+## About me
+---
+I'm mohamed bekheet, you con browser other repository on my [github profile](https://github.com/mohamedbakhet) and view my [linkedin page](https://www.linkedin.com/in/mohamedbekheet-/) and [kaggle profile](https://www.kaggle.com/mohamedbakhet) and you can contect with me throgth mohamedbekheet33@gmail.com
